@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "IgniteLiveAPI"
+version = "7.0.1"
+description = "Unofficial TikTok LIVE API for Python: real-time chat, gift, like, follow and viewer events from any TikTok livestream."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "LicenseRef-Modified-AGPL-3.0"
+license-files = ["LICENSE"]
+authors = [
+    { name = "sh1ftycode" },
+    { name = "Isaac Kogan", email = "info@isaackogan.com" },
+]
+keywords = ["tiktok live api", "tiktok api", "tiktoklive", "igniteliveapi", "euler stream", "tiktool", "tiktok live", "python3", "api", "unofficial"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Natural Language :: English",
+    "Framework :: AsyncIO",
+    "Topic :: Communications :: Chat",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Multimedia :: Video",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+]
+dependencies = [
+    "httpx>=0.28.1",
+    "pyee==13.0.1",
+    "ffmpy>=0.3.0",
+    "websockets_proxy==0.1.3",
+    "betterproto2==0.9.1",
+    "async-timeout>=4.0.3",
+    "mashumaro>=3.5",
+    "protobuf3-to-dict>=0.1.5",
+    "protobuf>=3.19.4",
+    "TikTokLiveProto==0.2.2",
+    "EulerApiSdk==0.1.0",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8.3", "pytest-asyncio>=0.24"]
+
+[project.urls]
+Homepage = "https://github.com/sh1ftycode/IgniteLiveAPI"
+Documentation = "https://github.com/sh1ftycode/IgniteLiveAPI/tree/master/docs"
+Source = "https://github.com/sh1ftycode/IgniteLiveAPI"
+Issues = "https://github.com/sh1ftycode/IgniteLiveAPI/issues"
+Changelog = "https://github.com/sh1ftycode/IgniteLiveAPI/releases"
+Upstream = "https://github.com/isaackogan/TikTokLive"
+"Production API" = "https://www.eulerstream.com/"
+
+[tool.setuptools.packages.find]
+include = ["IgniteLiveAPI*"]
